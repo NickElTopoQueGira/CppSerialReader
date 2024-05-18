@@ -26,9 +26,14 @@ int createFile(char* path){
 }
 
 int writeInAFile(char* path, char* text){
-    FILE* fp; 
-    fp = fopen(path, "a");
-    fprintf(fp, text);
+    // If it returns 0 it means the file was opened correctly otherwise  
+    // if it returns 1 the file was not opened
+
+    FILE* fp = fopen(path, "a");
+    if(fp == nullptr){
+        return 1;
+    }
+    fprintf(fp,"%s",text);
     fclose(fp);
     return 0;
 }
