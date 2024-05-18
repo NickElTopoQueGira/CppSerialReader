@@ -29,5 +29,20 @@ int writeInAFile(char* path, char* text){
     FILE* fp; 
     fp = fopen(path, "a");
     fprintf(fp, text);
+    fclose(fp);
+    return 0;
+}
+
+int isFileExist(char* path){
+    // If it returns 0 the file exists otherwise 
+    // if it returns 1 the file does not exist
+    
+    FILE* fp;
+    fp = fopen(path, "r");
+    if(fp == NULL){
+        return 1;
+        fclose(fp);    
+    }
+    fclose(fp); 
     return 0;
 }

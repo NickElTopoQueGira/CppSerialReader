@@ -8,8 +8,9 @@
 #include <ctime>
 #include <sstream>
 
-
+// Functions
 int createFile(char* path);
 int creteFileName (char* filename);
+int isFileExist(char* path);
 
 #endif
