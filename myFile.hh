@@ -37,7 +37,7 @@ int createFile(char* path);
  * Description: 
  * Adds to the file specified as input the message
  */
-int writeInAFile(char* path, char* text)
+int writeInAFile(char* path, char* text);
 
 /**
  * Function: isFileExist
